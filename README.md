@@ -68,6 +68,28 @@ pyautogui.hotkey('command', 'q')
 ```
 PyAutoGUI provides a wide range of functions for mouse and keyboard control, including moving the mouse, clicking, dragging, typing text, and pressing keys. It also offers image recognition capabilities, allowing you to locate and interact with specific graphical elements on the screen.PyAutoGUI is particularly useful for automating tasks that involve interacting with desktop applications or performing repetitive actions across multiple software tools.
 
+# 3. Data Analysis Automation with Pandas #
+Pandas is a powerful Python library for data manipulation and analysis. It provides data structures and functions that make it easy to work with structured data, such as tabular data in spreadsheets or SQL databases.With Pandas, you can automate various data analysis tasks, including data cleaning, transformation, filtering, aggregation, and visualization. It integrates well with other Python libraries, such as NumPy for numerical computing and Matplotlib for data visualization. Here’s an example of using Pandas to automate the analysis of a CSV file containing sales data:
+```bash
+import pandas as pd
 
+
+# Read the CSV file into a DataFrame
+df = pd.read_csv('sales_data.csv')
+# Display the first few rows of the DataFrame
+print(df.head())
+# Calculate total sales by product category
+sales_by_category = df.groupby('Category')['Sales'].sum()
+print(sales_by_category)
+# Filter the DataFrame to include only sales above a certain threshold
+high_sales = df[df['Sales'] > 1000]
+print(high_sales)
+# Create a new column based on a condition
+df['Discount'] = df['Price'].apply(lambda x: 0.1 if x > 50 else 0)
+print(df.head())
+# Save the modified DataFrame to a new CSV file
+df.to_csv('updated_sales_data.csv', index=False)
+```
+In this very cool example, Pandas is used to read a CSV file into a DataFrame, which is a two-dimensional labeled data structure. We can then perform various operations on the DataFrame, such as displaying the first few rows, calculating total sales by product category, filtering rows based on a condition, creating new columns, and saving the modified data to a new CSV file. Pandas provides a wide range of functions for data manipulation, including merging, reshaping, and aggregating data. It also supports handling missing data, working with time series data, and performing statistical analysis. By leveraging Pandas, you can automate repetitive data analysis tasks, saving time and effort in processing and deriving insights from large datasets.
 
 
