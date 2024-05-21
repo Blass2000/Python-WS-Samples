@@ -92,4 +92,84 @@ df.to_csv('updated_sales_data.csv', index=False)
 ```
 In this very cool example, Pandas is used to read a CSV file into a DataFrame, which is a two-dimensional labeled data structure. We can then perform various operations on the DataFrame, such as displaying the first few rows, calculating total sales by product category, filtering rows based on a condition, creating new columns, and saving the modified data to a new CSV file. Pandas provides a wide range of functions for data manipulation, including merging, reshaping, and aggregating data. It also supports handling missing data, working with time series data, and performing statistical analysis. By leveraging Pandas, you can automate repetitive data analysis tasks, saving time and effort in processing and deriving insights from large datasets.
 
+# 4. Test Automation with PyTest #
+Test automation is crucial for ensuring the quality and reliability of software applications. Python offers several testing frameworks, and one of the most popular and feature-rich frameworks is PyTest.PyTest is a testing framework that makes it easy to write and run tests for Python code. It provides a simple and expressive syntax for defining test cases, assertions, and fixtures. PyTest supports various types of tests, including unit tests, integration tests, and functional tests. Here’s an example of using PyTest to automate the testing of a simple Python function:
+```python
+# calculator.py
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+# test_calculator.py
+import pytest
+from calculator import add, subtract
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+    assert add(0, 0) == 0
+def test_subtract():
+    assert subtract(5, 3) == 2
+    assert subtract(-1, 1) == -2
+    assert subtract(0, 0) == 0
+def test_add_invalid_input():
+    with pytest.raises(TypeError):
+        add('2', 3)
+def test_subtract_invalid_input():
+    with
+```
+# 5. Demonstration: A Python Script for File Organization #
+To illustrate the power of Python automation, let’s walk through a practical example of automating file organization. Imagine you have a folder filled with various files — documents, images, videos, etc. Manually sorting these files into appropriate subfolders can be a tedious task. However, with a Python script, we can automate this process effortlessly. Here’s a sample Python script that organizes files based on their file extensions:
+```bash
+import os
+import shutil
+
+# Define the main folder path
+main_folder = "/path/to/your/folder"
+# Create subfolders for different file types
+subfolders = {
+    "Documents": [".pdf", ".doc", ".docx", ".txt"],
+    "Images": [".jpg", ".jpeg", ".png", ".gif"],
+    "Videos": [".mp4", ".avi", ".mov"],
+    "Audio": [".mp3", ".wav", ".aac"],
+    "Others": []
+}
+# Iterate over files in the main folder
+for filename in os.listdir(main_folder):
+    file_path = os.path.join(main_folder, filename)
+    
+    # Check if it's a file (not a folder)
+    if os.path.isfile(file_path):
+        # Get the file extension
+        _, extension = os.path.splitext(filename)
+        
+        # Determine the appropriate subfolder
+        subfolder = "Others"
+        for folder, extensions in subfolders.items():
+            if extension.lower() in extensions:
+                subfolder = folder
+                break
+        
+        # Create the subfolder if it doesn't exist
+        subfolder_path = os.path.join(main_folder, subfolder)
+        os.makedirs(subfolder_path, exist_ok=True)
+        
+        # Move the file to the appropriate subfolder
+        destination_path = os.path.join(subfolder_path, filename)
+        shutil.move(file_path, destination_path)
+        
+        print(f"Moved {filename} to {subfolder} folder.")
+```
+Let’s break down the script:
+
+We import the necessary modules: 'os' for file and directory operations, and shutil for file movement.
+We define the main_folder variable with the path to the folder containing the files to be organized.
+We create a dictionary called subfolders that maps subfolder names to lists of corresponding file extensions. The "Others" subfolder is used for files with unspecified extensions.
+We iterate over each file in the main_folder using os.listdir().
+For each file, we check if it’s a file (not a folder) using os.path.isfile().
+We extract the file extension using os.path.splitext().
+We determine the appropriate subfolder by iterating over the subfolders dictionary and checking if the file extension matches any of the specified extensions.
+If the subfolder doesn’t exist, we create it using os.makedirs() with exist_ok=True to avoid raising an error if the folder already exists.
+Finally, we move the file to the appropriate subfolder using shutil.move() and print a message indicating the file movement.
+This script demonstrates how Python can automate the tedious task of organizing files based on their extensions. By running this script, all the files in the specified folder will be automatically sorted into the appropriate subfolders, saving you time and effort.
 
