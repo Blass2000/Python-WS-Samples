@@ -160,16 +160,17 @@ for filename in os.listdir(main_folder):
         
         print(f"Moved {filename} to {subfolder} folder.")
 ```
-Let’s break down the script:
+Let’s review the script in detail :
 
-We import the necessary modules: 'os' for file and directory operations, and shutil for file movement.
-We define the main_folder variable with the path to the folder containing the files to be organized.
-We create a dictionary called subfolders that maps subfolder names to lists of corresponding file extensions. The "Others" subfolder is used for files with unspecified extensions.
-We iterate over each file in the main_folder using os.listdir().
-For each file, we check if it’s a file (not a folder) using os.path.isfile().
-We extract the file extension using os.path.splitext().
-We determine the appropriate subfolder by iterating over the subfolders dictionary and checking if the file extension matches any of the specified extensions.
-If the subfolder doesn’t exist, we create it using os.makedirs() with exist_ok=True to avoid raising an error if the folder already exists.
-Finally, we move the file to the appropriate subfolder using shutil.move() and print a message indicating the file movement.
-This script demonstrates how Python can automate the tedious task of organizing files based on their extensions. By running this script, all the files in the specified folder will be automatically sorted into the appropriate subfolders, saving you time and effort.
+•We import the necessary modules: 'os' for file and directory operations, and shutil for file movement.  
+•We define the main_folder variable with the path to the folder containing the files to be organized.  
+•We create a dictionary called subfolders that maps subfolder names to lists of corresponding file extensions. The "Others" subfolder is used for files with unspecified extensions.  
+•We iterate over each file in the main_folder using os.listdir().  
+•For each file, we check if it’s a file (not a folder) using os.path.isfile().  
+•We extract the file extension using os.path.splitext().  
+•We determine the appropriate subfolder by iterating over the subfolders dictionary and checking if the file extension matches any of the specified extensions.  
+•If the subfolder doesn’t exist, we create it using os.makedirs() with exist_ok=True to avoid raising an error if the folder already exists.  
+•Finally, we move the file to the appropriate subfolder using shutil.move() and print a message indicating the file movement.  
+This script demonstrates how Python can automate the tedious task of organizing files based on their extensions. By running this script, all the files in the specified folder will be automatically sorted into the appropriate subfolders, saving you time and effort.  
+
 
