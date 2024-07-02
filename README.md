@@ -174,7 +174,71 @@ Let’s review the script in detail :
 This script demonstrates how Python can automate the tedious task of organizing files based on their extensions. By running this script, all the files in the specified folder will be automatically sorted into the appropriate subfolders, saving you time and effort.  
 
 # 6. Pandas samples #
-Pandas is a popular Python library for data analysis, manipulation, and visualization. It provides a rich set of tools and functionalities that enable you to easily and effectively work with data in a variety of formats, including structured and unstructured data. In this article, we will provide a cheat sheet of common pandas operations and functions that you can use to quickly and efficiently perform data analysis in Python. I have placed this in a seperate section - - check it out. 
+Pandas is a popular Python library for data analysis, manipulation, and visualization. It provides a rich set of tools and functionalities that enable you to easily and effectively work with data in a variety of formats, including structured and unstructured data. In this article, we will provide a cheat sheet of common pandas operations and functions that you can use to quickly and efficiently perform data analysis in Python. 
+To use Pandas for data analysis, you will need to import the Pandas library using the import statement, as follows:
 
+![image](https://github.com/Blass2000/Python-WS-Samples/assets/89789502/44036c1b-dc92-43f6-9698-ccf9eab26bfd)
+
+Once you have imported the Pandas library, you can use the following operations and functions to perform common data analysis tasks:
+```bash
+data.head()
+```
+•View the first few rows of a data frame. 
+```bash
+data.head()
+```
+•View the first few rows of a data frame. 
+```bash
+data.tail()
+```
+View the last few rows of a data frame
+```bash
+data.describe()
+```
+Compute summary statistics for numerical columns
+```bash
+data.info()
+```
+View the data types and memory usage of a data frame.
+```bash
+data.columns
+```
+View the columns of a data frame.
+```bash
+data['column']
+```
+Select a column of a data frame.
+```bash
+data.loc[row_index]
+```
+Select a row of a data frame by its index.
+```bash
+data.iloc[row_index]
+```
+Select a row of a data frame by its position.
+```bash
+data.dropna()
+```
+Drop rows with missing values.
+```bash
+data.fillna(value)
+```
+Fill missing values with a given value.
+```bash
+data.rename(columns={'old': 'new'})
+```
+Rename columns of a data frame.
+```bash
+data.sort_values(by='column')
+```
+Sort a data frame by the values of a column.
+```bash
+data.groupby('column')['column'].mean()
+```
+Group a data frame by the values of a column and compute the mean of another column.
+```bash
+data.plot.hist()
+```
+Plot a histogram of a numerical
 
 Yeah, I know ther eis more to come 
