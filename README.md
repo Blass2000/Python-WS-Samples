@@ -1,4 +1,4 @@
-# Python-WS-Samples
+# Python-10 free WS Samples
 Samples of Python code that can expedite any project. 
 # 1. Web Scraping with BeautifulSoup and Selenium #
 Web scraping is the process of extracting data from websites automatically. Python provides excellent libraries for web scraping, making it easy to retrieve information from web pages and store it in a structured format. Two widely used libraries for web scraping are BeautifulSoup and Selenium.
@@ -173,4 +173,8 @@ Let’s review the script in detail :
 •Finally, we move the file to the appropriate subfolder using shutil.move() and print a message indicating the file movement.  
 This script demonstrates how Python can automate the tedious task of organizing files based on their extensions. By running this script, all the files in the specified folder will be automatically sorted into the appropriate subfolders, saving you time and effort.  
 
+# 6. Pandas samples #
+Pandas is a popular Python library for data analysis, manipulation, and visualization. It provides a rich set of tools and functionalities that enable you to easily and effectively work with data in a variety of formats, including structured and unstructured data. In this article, we will provide a cheat sheet of common pandas operations and functions that you can use to quickly and efficiently perform data analysis in Python. I have placed this in a seperate section - - check it out. 
 
+
+Yeah, I know ther eis more to come 
