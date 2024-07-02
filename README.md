@@ -241,4 +241,7 @@ data.plot.hist()
 ```
 Plot a histogram of a numerical
 
+
+
+
 Yeah, I know ther eis more to come 
