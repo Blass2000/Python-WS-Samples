@@ -1,4 +1,4 @@
-# Python-10 free WS Samples
+# Free Python-10 WS Samples
 Samples of Python code that can expedite any project. 
 # 1. Web Scraping with BeautifulSoup and Selenium #
 Web scraping is the process of extracting data from websites automatically. Python provides excellent libraries for web scraping, making it easy to retrieve information from web pages and store it in a structured format. Two widely used libraries for web scraping are BeautifulSoup and Selenium.
